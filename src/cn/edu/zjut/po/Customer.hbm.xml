@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.edu.zjut.po.Customer" table="customer" schema="dbo" catalog="hibernatedb">
+        <id name="customerId">
+            <column name="customerID" sql-type="int"/>
+            <generator class="increment"/>
+        </id>
+        <property name="account">
+            <column name="Account" sql-type="varchar(20)" length="20" />
+        </property>
+        <property name="name">
+            <column name="Name" sql-type="varchar(20)" length="20" />
+        </property>
+        <property name="password">
+            <column name="Password" sql-type="varchar(20)" length="20" />
+        </property>
+        <property name="sex">
+            <column name="Sex" sql-type="varchar(20)" length="20" />
+        </property>
+        <property name="birthday">
+            <column name="Birthday" sql-type="date" />
+        </property>
+        <property name="phone">
+            <column name="Phone" sql-type="varchar(20)" length="20" />
+        </property>
+        <property name="email">
+            <column name="Email" sql-type="varchar(100)" length="100" />
+        </property>
+        <property name="address">
+            <column name="Address" sql-type="varchar(200)" length="200" />
+        </property>
+        <property name="zipcode">
+            <column name="Zipcode" sql-type="varchar(10)" length="10" />
+        </property>
+        <property name="fax">
+            <column name="Fax" sql-type="varchar(20)" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

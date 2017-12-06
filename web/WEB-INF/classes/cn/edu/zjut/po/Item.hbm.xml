@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.edu.zjut.po.Item" table="item" schema="dbo" catalog="hibernatedb">
+        <id name="isbn">
+            <column name="ISBN" sql-type="varchar(20)" length="20"/>
+        </id>
+        <property name="title">
+            <column name="title" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="description">
+            <column name="description" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="cost">
+            <column name="cost" sql-type="float" precision="-1" not-null="true"/>
+        </property>
+        <property name="image">
+            <column name="image" sql-type="image" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

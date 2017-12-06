@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:sqlserver://localhost\MSSQLSERVER:1433;databaseName=hibernatedb</property>
+        <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password">dingchen116</property>
+        <property name="connection.autocommit">true</property>
+
+        <!--能在控制台输出 Hibernate 生成的格式良好的 SQL 语句，并在其中添加 有助于调试的注释-->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.use_sql_comments">true</property>
+
+        <!--C3P0 连接池的配置属性-->
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.min_size">1</property>
+        <property name="hibernate.c3p0.timeout">1800</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+
+        <mapping resource="cn/edu/zjut/po/Customer.hbm.xml"/>
+        <mapping resource="cn/edu/zjut/po/Item.hbm.xml"/>
+
+
+        <!--<mapping resource="cn/edu/zjut/po/Item.hbm.xml"/>-->
+        <!--<mapping resource="cn/edu/zjut/po/ItemDetail.hbm.xml" />-->
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
