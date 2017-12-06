@@ -4,7 +4,7 @@ import cn.edu.zjut.po.Customer;
 import cn.edu.zjut.service.UserService;
 
 public class UserAction {
-    private Customer loginUser; //省略getters/setters方法
+    private Customer loginUser;
 
     public Customer getLoginUser() {
         return loginUser;
